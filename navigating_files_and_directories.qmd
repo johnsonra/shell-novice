@@ -1,0 +1,50 @@
+---
+title: "Navigating Files and Directories"
+format: revealjs
+---
+
+## Challenge 1
+
+You can use two options at the same time. What does the command `ls` do when used with the `-l` option? What about if you use both the `-l` and the `-h` option? Some of its output is about properties that we do not cover in this lesson (such as file permissions and ownership), but the rest should be useful nevertheless.
+
+
+## Challenge 2
+
+By default, `ls` lists the contents of a directory in alphabetical order by name. The command `ls -t` lists items by time of last change instead of alphabetically. The command `ls -r` lists the contents of a directory in reverse order. Which file is displayed last when you combine the `-t` and `-r` options? Hint: You may need to use the `-l` option to see the last changed dates.
+
+
+## Challenge 3
+
+Starting from `/Users/nelle/data`, which of the following commands could Nelle use to navigate to her home directory, which is `/Users/nelle`?
+
+:::: {.columns}
+
+::: {.column}
+* `cd .`
+* `cd /`
+* `cd /home/nelle`
+* `cd ../..`
+* `cd ~`
+:::
+
+::: {.column}
+* `cd home`
+* `cd ~/data/..`
+* `cd`
+* `cd ..`
+:::
+
+::::
+
+
+## Challenge 4
+
+Using the filesystem diagram below, if `pwd` displays `/Users/thing`, what will `ls -F ../backup` display?
+
+![](https://swcarpentry.github.io/shell-novice/fig/filesystem-challenge.svg)
+
+## Challenge 5
+
+Using the filesystem diagram below (same as previous slide), if `pwd` displays `/Users/backup`, and `-r` tells `ls` to display things in reverse order, what command(s) will result in the following output: `pnas_sub/ pnas_final/ original/`
+
+![](https://swcarpentry.github.io/shell-novice/fig/filesystem-challenge.svg)
