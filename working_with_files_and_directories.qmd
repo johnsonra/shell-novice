@@ -1,0 +1,184 @@
+---
+title: "Working with Files and Directories"
+format: revealjs
+---
+
+## Challenge 1
+
+We have seen how to create text files using the `nano` editor. Now, try the following command: `touch my_file.txt`
+
+* What did the `touch` command do? When you look at your current directory using the GUI file explorer, does the file show up?
+* Use `ls -l` to inspect the files. How large is `my_file.txt`?
+* When might you want to create a file this way?
+
+
+## Challenge 2
+
+After running the following commands, Jamie realizes that she put the files `sucrose.dat` and `maltose.dat` into the wrong folder. The files should have been placed in the `raw` folder.
+
+<!-- `ls -F` adds the '/' indicating `analyzed` and `raw` are directories -->
+
+```
+$ ls -F
+ analyzed/ raw/
+ 
+$ ls -F analyzed
+fructose.dat glucose.dat maltose.dat sucrose.dat
+
+$ cd analyzed
+```
+
+Fill in the blanks to move these files to the raw/ folder (i.e. the one she forgot to put them in)
+
+```
+$ mv sucrose.dat maltose.dat ____/____
+```
+
+
+## Challenge 3
+
+Suppose that you created a plain-text file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it `statstics.txt`. After creating and saving this file you realize you misspelled the file name! You want to correct the mistake, which of the following commands could you use to do so?
+
+* `cp statstics.txt statistics.txt`
+* `mv statstics.txt statistics.txt`
+* `mv statstics.txt .`
+* `cp statstics.txt .`
+
+
+## Challenge 4
+
+What is the output of the closing `ls` command in the sequence shown below?
+
+:::: {.columns}
+
+::: {.column}
+```
+$ pwd
+/Users/jamie/data
+
+$ ls
+proteins.dat
+
+$ mkdir recombined
+
+$ mv proteins.dat recombined/
+
+$ cp recombined/proteins.dat ../proteins-saved.dat
+
+$ ls
+```
+:::
+
+::: {.column}
+* `proteins-saved.dat recombined`
+* `recombined`
+* `proteins.dat recombined`
+* `proteins-saved.dat`
+:::
+
+::::
+
+## Challenge 5
+
+What happens when we execute `rm -i thesis_backup/quotations.txt`? Why would we want this protection when using `rm`?
+
+
+## Challenge 6a
+
+For this exercise, you can test the commands in the `shell-lesson-data/exercise-data` directory.
+
+In the example below, what does `cp` do when given several file names and a directory name?
+
+```
+$ mkdir backup
+
+$ cp creatures/minotaur.dat creatures/unicorn.dat backup/
+```
+
+## Challenge 6b
+
+In the example below, what does `cp` do when given three or more file names?
+
+```
+$ cd creatures
+
+$ ls -F
+basilisk.dat  minotaur.dat  unicorn.dat
+
+$ cp minotaur.dat unicorn.dat basilisk.dat
+```
+
+
+## Challenge 7
+
+When run in the `alkanes` directory, which ls command(s) will produce this output? `ethane.pdb methane.pdb`
+
+* `ls *t*ane.pdb`
+* `ls *t?ne.*`
+* `ls *t??ne.pdb`
+* `ls ethane.*`
+
+
+## Challenge 8
+
+You’re starting a new experiment and would like to duplicate the directory structure from your previous experiment so you can add new data.
+
+Assume that the previous experiment is in a folder called `2016-05-18`, which contains a data folder that in turn contains folders named raw and processed that contain data files. The goal is to copy the folder structure of the `2016-05-18` folder into a folder called `2016-05-20` so that your final directory structure looks like this:
+
+```
+2016-05-20/
+└── data
+   ├── processed
+   └── raw
+```
+
+
+## Challenge 8 (cont)
+
+Which of the following set of commands would achieve this objective?
+
+:::: {.columns}
+
+::: {.column}
+```
+$ mkdir 2016-05-20
+$ mkdir 2016-05-20/data
+$ mkdir 2016-05-20/data/processed
+$ mkdir 2016-05-20/data/raw
+```
+
+&nbsp;  
+
+```
+$ mkdir 2016-05-20
+$ cd 2016-05-20
+$ mkdir data
+$ cd data
+$ mkdir raw processed
+```
+:::
+
+::: {.column}
+```
+$ mkdir 2016-05-20/data/raw
+$ mkdir 2016-05-20/data/processed
+```
+
+&nbsp;  
+
+```
+$ mkdir -p 2016-05-20/data/raw
+$ mkdir -p 2016-05-20/data/processed
+```
+
+&nbsp;  
+
+```
+$ mkdir 2016-05-20
+$ cd 2016-05-20
+$ mkdir data
+$ mkdir raw processed
+```
+:::
+
+::::
