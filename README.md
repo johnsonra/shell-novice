@@ -4,10 +4,10 @@ The information in this repository supports a video series titled [Using the She
 
 Using the shell consists of the following modules:
 
-1. Introduction to the shell
-2. Navigating Files and Directories (video, [challenges](https://johnsonra.github.io/shell-novice/navigating_files_and_directories.html))
-3. Working with files and directories (video, [challenges](https://johnsonra.github.io/shell-novice/working_with_files_and_directories.html))
-4. Pipes and filters (video, [challenges](https://johnsonra.github.io/shell-novice/pipes_and_filters.html))
+1. Introduction to the shell ([video](https://youtu.be/1iPO0AHqcMY))
+2. Navigating files and directories ([video](https://youtu.be/Ai2Q3cJsJwI), [challenges](https://johnsonra.github.io/shell-novice/navigating_files_and_directories.html))
+3. Working with files and directories ([video](https://youtu.be/-bhWFtuK5ss), [challenges](https://johnsonra.github.io/shell-novice/working_with_files_and_directories.html))
+4. Pipes and filters (*in progress*, [challenges](https://johnsonra.github.io/shell-novice/pipes_and_filters.html))
 5. Loops (*in progress*)
 6. Shell scripts (*in progress*)
 7. Finding things (*in progress*)

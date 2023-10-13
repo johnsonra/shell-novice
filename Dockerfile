@@ -7,7 +7,8 @@ FROM ubuntu
 # install dependencies
 RUN apt-get update && apt-get install -y \
   wget \
-  unzip
+  unzip \
+  nano
 
 # Download shell-novice files
 RUN wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
